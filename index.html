@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reproductor HLS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-4">
+
+    <h1 class="text-3xl font-bold mb-6">🎬 Reproductor de Películas</h1>
+
+    <div class="w-full max-w-3xl bg-gray-800 rounded-xl shadow-xl overflow-hidden">
+        <video id="video" class="w-full rounded-lg" controls></video>
+    </div>
+
+    <p class="text-gray-400 text-sm mt-4">Reproduciendo: <code>salida.m3u8</code></p>
+
+    <script>
+        const video = document.getElementById('video');
+        const hls = new Hls();
+        hls.loadSource('salida.m3u8'); // Cambia a tu ruta si es diferente
+        hls.attachMedia(video);
+    </script>
+</body>
+
+</html>
