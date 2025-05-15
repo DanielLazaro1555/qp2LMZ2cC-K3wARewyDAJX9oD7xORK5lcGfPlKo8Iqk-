@@ -1,2 +1,0 @@
-# ProyectoPeliculas
-Proyecto Peliculas Daniel
